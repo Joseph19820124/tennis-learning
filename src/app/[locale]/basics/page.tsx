@@ -1,8 +1,13 @@
-import Link from 'next/link';
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function BasicsPage() {
+  const t = useTranslations('basics');
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -19,9 +24,9 @@ export default function BasicsPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/80" />
         </div>
         <div className="relative z-10 max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-4">正手基础知识</h1>
+          <h1 className="text-4xl font-bold mb-4">{t('heroTitle')}</h1>
           <p className="text-xl text-green-100">
-            了解正手击球的基本概念，为后续学习打下坚实基础
+            {t('heroDesc')}
           </p>
         </div>
       </section>
@@ -29,15 +34,15 @@ export default function BasicsPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Intro Video */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">入门视频教程</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('introVideoTitle')}</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手入门教学" />
-              <p className="mt-2 text-gray-600 text-center text-sm">正手击球5步完整教学</p>
+              <YouTubeEmbed videoId="8V_KWh1Uoeo" title={t('video1Desc')} />
+              <p className="mt-2 text-gray-600 text-center text-sm">{t('video1Desc')}</p>
             </div>
             <div>
-              <YouTubeEmbed videoId="YqgcykDGB2A" title="初学者正手" />
-              <p className="mt-2 text-gray-600 text-center text-sm">初学者正手技术要点</p>
+              <YouTubeEmbed videoId="YqgcykDGB2A" title={t('video2Desc')} />
+              <p className="mt-2 text-gray-600 text-center text-sm">{t('video2Desc')}</p>
             </div>
           </div>
         </section>
@@ -46,7 +51,7 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">1</span>
-            什么是正手击球？
+            {t('whatIsForehand')}
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="md:flex gap-6">
@@ -63,18 +68,16 @@ export default function BasicsPage() {
               </div>
               <div className="md:w-2/3">
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  正手击球（Forehand）是网球中最基本也是最常用的击球方式。对于右手选手来说，
-                  正手是指球从身体右侧过来时，用握拍手（右手）的正面击球的动作。
+                  {t('forehandDesc1')}
                 </p>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  正手击球的特点是力量大、稳定性高、可控性强。在现代网球中，正手往往是球员的
-                  主要进攻武器，许多顶尖球员都以其强大的正手著称。
+                  {t('forehandDesc2')}
                 </p>
               </div>
             </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 mt-4">
               <p className="text-green-800 font-medium">
-                关键点：正手是大多数人的优势手，因为使用的是惯用手，更容易发力和控制。
+                {t('keyPoint')}
               </p>
             </div>
           </div>
@@ -84,7 +87,7 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">2</span>
-            正手为什么重要？
+            {t('whyImportant')}
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -97,10 +100,9 @@ export default function BasicsPage() {
                   unoptimized
                 />
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-800">使用频率高</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-800">{t('highFrequency')}</h3>
               <p className="text-gray-600">
-                统计显示，职业比赛中正手击球占所有底线击球的60-70%。这意味着正手的稳定性
-                直接决定了比赛的质量。
+                {t('highFrequencyDesc')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -113,24 +115,21 @@ export default function BasicsPage() {
                   unoptimized
                 />
               </div>
-              <h3 className="font-bold text-lg mb-2 text-gray-800">主要得分手段</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-800">{t('mainScoring')}</h3>
               <p className="text-gray-600">
-                正手是制造winner（制胜分）的主要武器。强力的正手可以在关键时刻一击制胜，
-                给对手造成巨大压力。
+                {t('mainScoringDesc')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-800">建立节奏</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-800">{t('buildRhythm')}</h3>
               <p className="text-gray-600">
-                稳定的正手帮助你控制比赛节奏。通过正手的深度和角度变化，可以调动对手，
-                创造进攻机会。
+                {t('buildRhythmDesc')}
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="font-bold text-lg mb-2 text-gray-800">心理优势</h3>
+              <h3 className="font-bold text-lg mb-2 text-gray-800">{t('psychological')}</h3>
               <p className="text-gray-600">
-                拥有可靠的正手会增强自信心。当你知道自己的正手不会轻易失误时，
-                整个比赛的心态都会更加放松。
+                {t('psychologicalDesc')}
               </p>
             </div>
           </div>
@@ -138,10 +137,10 @@ export default function BasicsPage() {
 
         {/* Pro Demo Video */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-800 mb-4">职业选手正手示范</h2>
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('proDemoTitle')}</h2>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <YouTubeEmbed videoId="NsYdWHVfQKo" title="职业选手正手对比" />
-            <p className="mt-4 text-gray-600 text-center">阿尔卡拉斯正手技术慢动作分析</p>
+            <YouTubeEmbed videoId="NsYdWHVfQKo" title={t('proDemoDesc')} />
+            <p className="mt-4 text-gray-600 text-center">{t('proDemoDesc')}</p>
           </div>
         </section>
 
@@ -149,7 +148,7 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">3</span>
-            正手的基本要素
+            {t('basicElements')}
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="space-y-6">
@@ -158,10 +157,9 @@ export default function BasicsPage() {
                   1
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-800">握拍（Grip）</h3>
+                  <h3 className="font-bold text-lg text-gray-800">{t('element1Title')}</h3>
                   <p className="text-gray-600 mt-1">
-                    握拍方式决定了击球点的位置和球的旋转。主要有东方式、半西方式和西方式三种，
-                    每种都有其特点和适用场景。
+                    {t('element1Desc')}
                   </p>
                 </div>
               </div>
@@ -170,10 +168,9 @@ export default function BasicsPage() {
                   2
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-800">站位（Stance）</h3>
+                  <h3 className="font-bold text-lg text-gray-800">{t('element2Title')}</h3>
                   <p className="text-gray-600 mt-1">
-                    正确的站位包括开放式、半开放式和封闭式。不同的站位适合不同的击球情况，
-                    现代网球更多使用开放式站位。
+                    {t('element2Desc')}
                   </p>
                 </div>
               </div>
@@ -182,10 +179,9 @@ export default function BasicsPage() {
                   3
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-800">引拍（Backswing）</h3>
+                  <h3 className="font-bold text-lg text-gray-800">{t('element3Title')}</h3>
                   <p className="text-gray-600 mt-1">
-                    引拍是准备击球的动作，包括转肩、转髋和拍头后摆。好的引拍能储存足够的能量，
-                    为击球做好准备。
+                    {t('element3Desc')}
                   </p>
                 </div>
               </div>
@@ -194,9 +190,9 @@ export default function BasicsPage() {
                   4
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-800">击球点（Contact Point）</h3>
+                  <h3 className="font-bold text-lg text-gray-800">{t('element4Title')}</h3>
                   <p className="text-gray-600 mt-1">
-                    理想的击球点在身体前方、腰部高度。击球点的位置直接影响击球的力量和控制。
+                    {t('element4Desc')}
                   </p>
                 </div>
               </div>
@@ -205,10 +201,9 @@ export default function BasicsPage() {
                   5
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-gray-800">随挥（Follow Through）</h3>
+                  <h3 className="font-bold text-lg text-gray-800">{t('element5Title')}</h3>
                   <p className="text-gray-600 mt-1">
-                    随挥是击球后的延续动作，通常结束于左肩上方。完整的随挥能确保力量的充分传递
-                    和身体的平衡。
+                    {t('element5Desc')}
                   </p>
                 </div>
               </div>
@@ -220,59 +215,58 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">4</span>
-            现代正手 vs 传统正手
+            {t('modernVsClassic')}
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             <div>
-              <YouTubeEmbed videoId="QZtxvwHvNe4" title="经典正手训练" />
-              <p className="mt-2 text-gray-600 text-center text-sm">正手技术训练教学</p>
+              <YouTubeEmbed videoId="QZtxvwHvNe4" title={t('federerClassic')} />
+              <p className="mt-2 text-gray-600 text-center text-sm">{t('federerClassic')}</p>
             </div>
             <div>
-              <YouTubeEmbed videoId="IbLqTVTZO3s" title="现代正手技术" />
-              <p className="mt-2 text-gray-600 text-center text-sm">现代正手技术慢动作分析</p>
+              <YouTubeEmbed videoId="IbLqTVTZO3s" title={t('nadalModern')} />
+              <p className="mt-2 text-gray-600 text-center text-sm">{t('nadalModern')}</p>
             </div>
           </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <table className="w-full">
               <thead className="bg-green-600 text-white">
                 <tr>
-                  <th className="px-4 py-3 text-left">特征</th>
-                  <th className="px-4 py-3 text-left">现代正手</th>
-                  <th className="px-4 py-3 text-left">传统正手</th>
+                  <th className="px-4 py-3 text-left">{t('tableFeature')}</th>
+                  <th className="px-4 py-3 text-left">{t('tableModern')}</th>
+                  <th className="px-4 py-3 text-left">{t('tableClassic')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-4 py-3 font-medium text-gray-800">握拍</td>
-                  <td className="px-4 py-3 text-gray-600">半西方式/西方式</td>
-                  <td className="px-4 py-3 text-gray-600">东方式</td>
+                  <td className="px-4 py-3 font-medium text-gray-800">{t('tableGrip')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('modernGrip')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('classicGrip')}</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-3 font-medium text-gray-800">站位</td>
-                  <td className="px-4 py-3 text-gray-600">开放式为主</td>
-                  <td className="px-4 py-3 text-gray-600">封闭式为主</td>
+                  <td className="px-4 py-3 font-medium text-gray-800">{t('tableStance')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('modernStance')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('classicStance')}</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium text-gray-800">引拍</td>
-                  <td className="px-4 py-3 text-gray-600">环形引拍</td>
-                  <td className="px-4 py-3 text-gray-600">直线后拉</td>
+                  <td className="px-4 py-3 font-medium text-gray-800">{t('tableBackswing')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('modernBackswing')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('classicBackswing')}</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="px-4 py-3 font-medium text-gray-800">旋转</td>
-                  <td className="px-4 py-3 text-gray-600">强烈上旋</td>
-                  <td className="px-4 py-3 text-gray-600">平击/轻微上旋</td>
+                  <td className="px-4 py-3 font-medium text-gray-800">{t('tableSpin')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('modernSpin')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('classicSpin')}</td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-3 font-medium text-gray-800">击球点</td>
-                  <td className="px-4 py-3 text-gray-600">更靠前、更高</td>
-                  <td className="px-4 py-3 text-gray-600">身体侧面、腰部高度</td>
+                  <td className="px-4 py-3 font-medium text-gray-800">{t('tableContact')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('modernContact')}</td>
+                  <td className="px-4 py-3 text-gray-600">{t('classicContact')}</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="text-gray-600 mt-4 text-sm">
-            * 现代正手更适合当今快节奏的比赛风格，但初学者可以从传统正手开始，
-            逐步过渡到现代正手。
+            {t('tableNote')}
           </p>
         </section>
 
@@ -280,38 +274,38 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">5</span>
-            初学者建议
+            {t('beginnerTips')}
           </h2>
           <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-6">
             <ul className="space-y-3">
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
+                <span className="text-green-600 mr-2">&#10003;</span>
                 <span className="text-gray-700">
-                  <strong>从简单开始：</strong>先用东方式握拍学习基本动作，熟练后再尝试其他握拍方式
+                  <strong>{t('tip1Title')}</strong>{t('tip1Desc')}
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
+                <span className="text-green-600 mr-2">&#10003;</span>
                 <span className="text-gray-700">
-                  <strong>注重基础：</strong>不要急于追求力量，先确保动作的正确性和稳定性
+                  <strong>{t('tip2Title')}</strong>{t('tip2Desc')}
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
+                <span className="text-green-600 mr-2">&#10003;</span>
                 <span className="text-gray-700">
-                  <strong>多球练习：</strong>通过大量的多球训练来固定动作，形成肌肉记忆
+                  <strong>{t('tip3Title')}</strong>{t('tip3Desc')}
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
+                <span className="text-green-600 mr-2">&#10003;</span>
                 <span className="text-gray-700">
-                  <strong>观看示范：</strong>多观看职业选手的正手慢动作视频，模仿他们的动作
+                  <strong>{t('tip4Title')}</strong>{t('tip4Desc')}
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-green-600 mr-2">✓</span>
+                <span className="text-green-600 mr-2">&#10003;</span>
                 <span className="text-gray-700">
-                  <strong>寻求反馈：</strong>如果可能，找教练或经验丰富的球友帮你纠正动作
+                  <strong>{t('tip5Title')}</strong>{t('tip5Desc')}
                 </span>
               </li>
             </ul>
@@ -320,16 +314,15 @@ export default function BasicsPage() {
 
         {/* Next Steps */}
         <section className="bg-gray-800 text-white rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">下一步：学习握拍方式</h2>
+          <h2 className="text-2xl font-bold mb-4">{t('nextStep')}</h2>
           <p className="text-gray-300 mb-6">
-            了解了正手的基础知识后，让我们深入学习不同的握拍方式，
-            这是掌握正手技术的第一步。
+            {t('nextStepDesc')}
           </p>
           <Link
             href="/grip"
             className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-500 transition-colors"
           >
-            学习握拍方式 →
+            {t('nextStepButton')}
           </Link>
         </section>
       </div>
