@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 const grips = [
   {
@@ -43,8 +45,19 @@ export default function GripPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=1920&h=600&fit=crop"
+            alt="Tennis grip"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/80" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">握拍方式详解</h1>
           <p className="text-xl text-green-100">
             选择适合自己的握拍方式是正手技术的第一步
@@ -53,6 +66,21 @@ export default function GripPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Video Tutorial */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">握拍视频教程</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手技术教学" />
+              <p className="mt-2 text-gray-600 text-center text-sm">正手技术完整教学</p>
+            </div>
+            <div>
+              <YouTubeEmbed videoId="QZtxvwHvNe4" title="正手训练方法" />
+              <p className="mt-2 text-gray-600 text-center text-sm">正手训练技巧讲解</p>
+            </div>
+          </div>
+        </section>
+
         {/* Introduction */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">理解握拍</h2>

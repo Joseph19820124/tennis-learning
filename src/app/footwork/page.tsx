@@ -1,11 +1,23 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function FootworkPage() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      {/* Hero with Background Image */}
+      <section className="relative text-white py-16">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&h=600&fit=crop"
+            alt="Tennis footwork"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 to-green-700/85" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">站位与步法</h1>
           <p className="text-xl text-green-100">
             正确的站位和步法是打好正手的基础保障
@@ -275,10 +287,52 @@ export default function FootworkPage() {
           </div>
         </section>
 
-        {/* Movement Sequence */}
+        {/* Video Tutorials Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">4</span>
+            步法教学视频
+          </h2>
+          <div className="space-y-8">
+            {/* Video 1 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-gray-800 mb-3">网球步法基础</h3>
+                <p className="text-gray-600 mb-4">
+                  详细讲解网球步法的基本原理和入门技巧，帮助初学者建立正确的移动模式。
+                </p>
+                <YouTubeEmbed videoId="QZtxvwHvNe4" title="网球步法基础教学" />
+              </div>
+            </div>
+
+            {/* Video 2 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-gray-800 mb-3">分腿垫步教学</h3>
+                <p className="text-gray-600 mb-4">
+                  分腿垫步是网球中最重要的步法动作之一，学会正确的时机和姿势能大幅提升你的反应速度。
+                </p>
+                <YouTubeEmbed videoId="8V_KWh1Uoeo" title="分腿垫步教学" />
+              </div>
+            </div>
+
+            {/* Video 3 */}
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="p-6">
+                <h3 className="font-bold text-lg text-gray-800 mb-3">职业选手步法分析</h3>
+                <p className="text-gray-600 mb-4">
+                  通过分析职业选手的步法技术，学习顶尖球员是如何在场上高效移动的。
+                </p>
+                <YouTubeEmbed videoId="32nyPw9YUEA" title="职业选手步法分析" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Movement Sequence */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+            <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">5</span>
             完整移动流程
           </h2>
           <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-6">
@@ -319,7 +373,7 @@ export default function FootworkPage() {
         {/* Training Tips */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
-            <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">5</span>
+            <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">6</span>
             步法训练建议
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">

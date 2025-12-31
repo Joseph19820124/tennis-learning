@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 const players = [
   {
@@ -9,6 +11,7 @@ const players = [
     grip: '东方式/半西方式',
     style: '优雅流畅型',
     image: '🇨🇭',
+    youtubeId: 'QZtxvwHvNe4',
     characteristics: [
       '动作极其流畅优雅，被誉为"史上最美正手"',
       '使用偏东方式握拍，击球点较早',
@@ -27,6 +30,7 @@ const players = [
     grip: '半西方式/西方式',
     style: '强力上旋型',
     image: '🇪🇸',
+    youtubeId: 'IbLqTVTZO3s',
     characteristics: [
       '标志性的超强上旋正手，有"纳达尔旋转"之称',
       '使用偏西方式握拍，击球点较高',
@@ -45,6 +49,7 @@ const players = [
     grip: '半西方式',
     style: '稳定全面型',
     image: '🇷🇸',
+    youtubeId: '32nyPw9YUEA',
     characteristics: [
       '正手稳定性极高，失误率低',
       '标准半西方式握拍，攻守兼备',
@@ -63,6 +68,7 @@ const players = [
     grip: '半西方式',
     style: '爆发进攻型',
     image: '🇪🇸',
+    youtubeId: 'NsYdWHVfQKo',
     characteristics: [
       '年轻一代的正手代表，爆发力惊人',
       '能在高速移动中打出高质量正手',
@@ -81,6 +87,7 @@ const players = [
     grip: '半西方式',
     style: '机械精准型',
     image: '🇮🇹',
+    youtubeId: 'WPY0s9FQA4g',
     characteristics: [
       '动作标准教科书式，非常适合学习',
       '击球深度控制出色',
@@ -116,8 +123,18 @@ export default function ProsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-white py-16">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?w=1920&h=600&fit=crop"
+            alt="Tennis background"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 to-green-700/90" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">职业选手正手分析</h1>
           <p className="text-xl text-green-100">
             向顶尖高手学习，汲取他们正手技术的精华
@@ -196,6 +213,15 @@ export default function ProsPage() {
                   <div className="bg-green-50 p-4 rounded">
                     <h4 className="font-bold text-green-800 mb-1">可以学习的点</h4>
                     <p className="text-gray-600 text-sm">{player.learnFrom}</p>
+                  </div>
+
+                  {/* YouTube Video */}
+                  <div className="mt-6">
+                    <h4 className="font-bold text-gray-800 mb-3">正手技术视频</h4>
+                    <YouTubeEmbed
+                      videoId={player.youtubeId}
+                      title={`${player.name}正手技术分析`}
+                    />
                   </div>
                 </div>
               </div>

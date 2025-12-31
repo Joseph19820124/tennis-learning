@@ -1,11 +1,24 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function BasicsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=1920&h=600&fit=crop"
+            alt="Tennis basics"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/80" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">正手基础知识</h1>
           <p className="text-xl text-green-100">
             了解正手击球的基本概念，为后续学习打下坚实基础
@@ -14,6 +27,21 @@ export default function BasicsPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Intro Video */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">入门视频教程</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手入门教学" />
+              <p className="mt-2 text-gray-600 text-center text-sm">正手击球5步完整教学</p>
+            </div>
+            <div>
+              <YouTubeEmbed videoId="YqgcykDGB2A" title="初学者正手" />
+              <p className="mt-2 text-gray-600 text-center text-sm">初学者正手技术要点</p>
+            </div>
+          </div>
+        </section>
+
         {/* What is Forehand */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center">
@@ -21,14 +49,29 @@ export default function BasicsPage() {
             什么是正手击球？
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              正手击球（Forehand）是网球中最基本也是最常用的击球方式。对于右手选手来说，
-              正手是指球从身体右侧过来时，用握拍手（右手）的正面击球的动作。
-            </p>
-            <p className="text-gray-700 mb-4 leading-relaxed">
-              正手击球的特点是力量大、稳定性高、可控性强。在现代网球中，正手往往是球员的
-              主要进攻武器，许多顶尖球员都以其强大的正手著称。
-            </p>
+            <div className="md:flex gap-6">
+              <div className="md:w-1/3 mb-4 md:mb-0">
+                <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                  <Image
+                    src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=300&fit=crop"
+                    alt="Tennis forehand"
+                    fill
+                    className="object-cover"
+                    unoptimized
+                  />
+                </div>
+              </div>
+              <div className="md:w-2/3">
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  正手击球（Forehand）是网球中最基本也是最常用的击球方式。对于右手选手来说，
+                  正手是指球从身体右侧过来时，用握拍手（右手）的正面击球的动作。
+                </p>
+                <p className="text-gray-700 mb-4 leading-relaxed">
+                  正手击球的特点是力量大、稳定性高、可控性强。在现代网球中，正手往往是球员的
+                  主要进攻武器，许多顶尖球员都以其强大的正手著称。
+                </p>
+              </div>
+            </div>
             <div className="bg-green-50 border-l-4 border-green-500 p-4 mt-4">
               <p className="text-green-800 font-medium">
                 关键点：正手是大多数人的优势手，因为使用的是惯用手，更容易发力和控制。
@@ -45,6 +88,15 @@ export default function BasicsPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="relative w-full h-32 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=400&h=200&fit=crop"
+                  alt="Tennis match"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
               <h3 className="font-bold text-lg mb-2 text-gray-800">使用频率高</h3>
               <p className="text-gray-600">
                 统计显示，职业比赛中正手击球占所有底线击球的60-70%。这意味着正手的稳定性
@@ -52,6 +104,15 @@ export default function BasicsPage() {
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="relative w-full h-32 mb-4 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=400&h=200&fit=crop"
+                  alt="Tennis power"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
               <h3 className="font-bold text-lg mb-2 text-gray-800">主要得分手段</h3>
               <p className="text-gray-600">
                 正手是制造winner（制胜分）的主要武器。强力的正手可以在关键时刻一击制胜，
@@ -72,6 +133,15 @@ export default function BasicsPage() {
                 整个比赛的心态都会更加放松。
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* Pro Demo Video */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">职业选手正手示范</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <YouTubeEmbed videoId="NsYdWHVfQKo" title="职业选手正手对比" />
+            <p className="mt-4 text-gray-600 text-center">阿尔卡拉斯正手技术慢动作分析</p>
           </div>
         </section>
 
@@ -152,6 +222,16 @@ export default function BasicsPage() {
             <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">4</span>
             现代正手 vs 传统正手
           </h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <YouTubeEmbed videoId="QZtxvwHvNe4" title="经典正手训练" />
+              <p className="mt-2 text-gray-600 text-center text-sm">正手技术训练教学</p>
+            </div>
+            <div>
+              <YouTubeEmbed videoId="IbLqTVTZO3s" title="现代正手技术" />
+              <p className="mt-2 text-gray-600 text-center text-sm">现代正手技术慢动作分析</p>
+            </div>
+          </div>
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <table className="w-full">
               <thead className="bg-green-600 text-white">

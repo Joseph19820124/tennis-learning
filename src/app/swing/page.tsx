@@ -1,11 +1,24 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function SwingPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1542144582-1ba00456b5e3?w=1920&h=600&fit=crop"
+            alt="Tennis swing motion"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-700/80" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">挥拍动作分解</h1>
           <p className="text-xl text-green-100">
             详细拆解正手挥拍的每个阶段，掌握标准动作
@@ -14,6 +27,21 @@ export default function SwingPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Intro Video */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">挥拍教学视频</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手挥拍完整教学" />
+              <p className="mt-2 text-gray-600 text-center text-sm">正手挥拍完整教学</p>
+            </div>
+            <div>
+              <YouTubeEmbed videoId="YqgcykDGB2A" title="上旋球挥拍技术" />
+              <p className="mt-2 text-gray-600 text-center text-sm">上旋球挥拍技术</p>
+            </div>
+          </div>
+        </section>
+
         {/* Overview */}
         <section className="mb-12">
           <div className="bg-white rounded-lg shadow-md p-6">
@@ -81,10 +109,23 @@ export default function SwingPage() {
             引拍阶段（Backswing）
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-700 mb-6">
-              引拍是储存击球能量的关键阶段。现代网球多采用环形引拍（loop backswing），
-              比传统的直线后拉更流畅，能产生更大的拍头速度。
-            </p>
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="relative w-full h-48 rounded-lg overflow-hidden">
+                <Image
+                  src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=300&fit=crop"
+                  alt="Tennis backswing"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+              <div>
+                <p className="text-gray-700">
+                  引拍是储存击球能量的关键阶段。现代网球多采用环形引拍（loop backswing），
+                  比传统的直线后拉更流畅，能产生更大的拍头速度。
+                </p>
+              </div>
+            </div>
 
             <div className="space-y-6">
               <div className="border-l-4 border-green-500 pl-4">
@@ -131,6 +172,13 @@ export default function SwingPage() {
             击球阶段（Contact）
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
+            {/* Slow Motion Video */}
+            <div className="mb-6">
+              <h3 className="font-bold text-lg text-gray-800 mb-3">慢动作分析</h3>
+              <YouTubeEmbed videoId="WPY0s9FQA4g" title="职业选手挥拍慢动作" />
+              <p className="mt-2 text-gray-600 text-center text-sm">职业选手正手挥拍慢动作分析 - 观察击球瞬间</p>
+            </div>
+
             <p className="text-gray-700 mb-6">
               击球阶段是整个挥拍动作的核心。这个阶段虽然只有几十毫秒，
               但决定了球的方向、速度和旋转。
@@ -213,6 +261,13 @@ export default function SwingPage() {
             随挥阶段（Follow Through）
           </h2>
           <div className="bg-white rounded-lg shadow-md p-6">
+            {/* Pro Analysis Video */}
+            <div className="mb-6">
+              <h3 className="font-bold text-lg text-gray-800 mb-3">职业选手随挥分析</h3>
+              <YouTubeEmbed videoId="NsYdWHVfQKo" title="职业选手挥拍分析" />
+              <p className="mt-2 text-gray-600 text-center text-sm">职业选手正手 - 完美的随挥动作</p>
+            </div>
+
             <p className="text-gray-700 mb-6">
               随挥是击球后的延续动作。虽然球已经离开球拍，但完整的随挥对于
               力量传递、身体平衡和防止受伤都非常重要。

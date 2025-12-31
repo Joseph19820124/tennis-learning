@@ -1,11 +1,25 @@
+'use client';
+
+import Image from 'next/image';
 import Link from 'next/link';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 export default function PracticePage() {
   return (
     <div className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      {/* Hero with Background Image */}
+      <section className="relative text-white py-16">
+        <div className="absolute inset-0">
+          <Image
+            src="https://images.unsplash.com/photo-1551773188-d4f5b2e1dc4e?w=1920&h=600&fit=crop"
+            alt="网球练习场"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/90 to-green-700/80" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">练习方法与进阶技巧</h1>
           <p className="text-xl text-green-100">
             科学的练习方法让你的正手进步更快
@@ -31,21 +45,21 @@ export default function PracticePage() {
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">练习内容</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 握拍和准备姿势练习</li>
-                    <li>• 空挥拍练习（每天100次）</li>
-                    <li>• 近距离喂球练习</li>
-                    <li>• 墙壁练习（站近距离）</li>
-                    <li>• 基础步法练习</li>
+                    <li>* 握拍和准备姿势练习</li>
+                    <li>* 空挥拍练习（每天100次）</li>
+                    <li>* 近距离喂球练习</li>
+                    <li>* 墙壁练习（站近距离）</li>
+                    <li>* 基础步法练习</li>
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">重点关注</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 正确的握拍位置</li>
-                    <li>• 转体而非只用手臂</li>
-                    <li>• 击球点在身前</li>
-                    <li>• 完整的随挥</li>
-                    <li>• 稳定而非力量</li>
+                    <li>* 正确的握拍位置</li>
+                    <li>* 转体而非只用手臂</li>
+                    <li>* 击球点在身前</li>
+                    <li>* 完整的随挥</li>
+                    <li>* 稳定而非力量</li>
                   </ul>
                 </div>
               </div>
@@ -65,21 +79,21 @@ export default function PracticePage() {
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">练习内容</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 连续对拉练习（目标50板）</li>
-                    <li>• 墙壁练习（加大距离）</li>
-                    <li>• 定点落点练习</li>
-                    <li>• 上旋球练习</li>
-                    <li>• 移动中击球练习</li>
+                    <li>* 连续对拉练习（目标50板）</li>
+                    <li>* 墙壁练习（加大距离）</li>
+                    <li>* 定点落点练习</li>
+                    <li>* 上旋球练习</li>
+                    <li>* 移动中击球练习</li>
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">重点关注</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 击球的连续性</li>
-                    <li>• 上旋的稳定产生</li>
-                    <li>• 移动后的击球质量</li>
-                    <li>• 不同高度球的处理</li>
-                    <li>• 深度控制</li>
+                    <li>* 击球的连续性</li>
+                    <li>* 上旋的稳定产生</li>
+                    <li>* 移动后的击球质量</li>
+                    <li>* 不同高度球的处理</li>
+                    <li>* 深度控制</li>
                   </ul>
                 </div>
               </div>
@@ -99,21 +113,21 @@ export default function PracticePage() {
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">练习内容</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 角度变化练习</li>
-                    <li>• inside-out正手练习</li>
-                    <li>• 加速进攻练习</li>
-                    <li>• 接发球正手练习</li>
-                    <li>• 比赛模式练习</li>
+                    <li>* 角度变化练习</li>
+                    <li>* inside-out正手练习</li>
+                    <li>* 加速进攻练习</li>
+                    <li>* 接发球正手练习</li>
+                    <li>* 比赛模式练习</li>
                   </ul>
                 </div>
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-800 mb-2">重点关注</h4>
                   <ul className="text-gray-600 text-sm space-y-1">
-                    <li>• 战术意识</li>
-                    <li>• 节奏变化</li>
-                    <li>• 关键分的处理</li>
-                    <li>• 压力下的稳定</li>
-                    <li>• 制胜分能力</li>
+                    <li>* 战术意识</li>
+                    <li>* 节奏变化</li>
+                    <li>* 关键分的处理</li>
+                    <li>* 压力下的稳定</li>
+                    <li>* 制胜分能力</li>
                   </ul>
                 </div>
               </div>
@@ -129,18 +143,24 @@ export default function PracticePage() {
             {/* Wall Practice */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <span className="text-2xl mr-2">🧱</span>
+                <span className="text-2xl mr-2">&#x1F9F1;</span>
                 墙壁练习
               </h3>
               <p className="text-gray-600 mb-4">
                 墙壁是最好的练习伙伴，永远不会失误，还会把球打回来。适合各个水平的练习。
               </p>
+
+              {/* Wall Practice Video */}
+              <div className="mb-4">
+                <YouTubeEmbed videoId="QZtxvwHvNe4" title="墙壁练习方法教学" />
+              </div>
+
               <div className="bg-gray-50 p-4 rounded mb-4">
                 <h4 className="font-bold text-gray-700 mb-2">练习要点</h4>
                 <ul className="text-gray-600 text-sm space-y-1">
-                  <li>• <strong>初学者：</strong>站在离墙3-4米处，轻击保持连续</li>
-                  <li>• <strong>进阶者：</strong>站在6-8米处，模拟实际击球距离</li>
-                  <li>• <strong>高级者：</strong>加入移动、变换角度和力量</li>
+                  <li>* <strong>初学者：</strong>站在离墙3-4米处，轻击保持连续</li>
+                  <li>* <strong>进阶者：</strong>站在6-8米处，模拟实际击球距离</li>
+                  <li>* <strong>高级者：</strong>加入移动、变换角度和力量</li>
                 </ul>
               </div>
               <div className="bg-green-50 p-4 rounded">
@@ -155,12 +175,18 @@ export default function PracticePage() {
             {/* Multi-ball */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <span className="text-2xl mr-2">🎾</span>
+                <span className="text-2xl mr-2">&#x1F3BE;</span>
                 多球训练
               </h3>
               <p className="text-gray-600 mb-4">
                 教练或同伴连续喂球，你专注于击球动作和落点。是提高技术的最有效方法之一。
               </p>
+
+              {/* Multi-ball Training Video */}
+              <div className="mb-4">
+                <YouTubeEmbed videoId="YqgcykDGB2A" title="多球训练教学" />
+              </div>
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-gray-50 p-4 rounded">
                   <h4 className="font-bold text-gray-700 mb-2">定点练习</h4>
@@ -182,7 +208,7 @@ export default function PracticePage() {
             {/* Rally Practice */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <span className="text-2xl mr-2">👥</span>
+                <span className="text-2xl mr-2">&#x1F465;</span>
                 对拉练习
               </h3>
               <p className="text-gray-600 mb-4">
@@ -223,7 +249,7 @@ export default function PracticePage() {
             {/* Shadow Swing */}
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
-                <span className="text-2xl mr-2">🏃</span>
+                <span className="text-2xl mr-2">&#x1F3C3;</span>
                 影子练习
               </h3>
               <p className="text-gray-600 mb-4">
@@ -238,6 +264,18 @@ export default function PracticePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Practice Videos Section */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">正手练习教学视频</h2>
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-4">正手练习方法详解</h3>
+            <p className="text-gray-600 mb-4">
+              系统学习正手练习的各种方法，从基础动作到进阶技巧，帮助你更快提升水平。
+            </p>
+            <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手练习方法详解" />
           </div>
         </section>
 
@@ -339,7 +377,7 @@ export default function PracticePage() {
             href="/pros"
             className="inline-block bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-500 transition-colors"
           >
-            分析职业选手 →
+            分析职业选手 &rarr;
           </Link>
         </section>
       </div>

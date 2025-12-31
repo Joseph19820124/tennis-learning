@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
 
 const mistakes = [
   {
@@ -111,10 +113,21 @@ export default function MistakesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero */}
-      <section className="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="relative text-white py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://images.unsplash.com/photo-1587280501635-68a0e82cd5ff?w=1920&h=600&fit=crop"
+            alt="Tennis mistakes correction"
+            fill
+            className="object-cover"
+            priority
+            unoptimized
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-red-900/90 to-orange-700/80" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4">
           <h1 className="text-4xl font-bold mb-4">常见错误与纠正</h1>
-          <p className="text-xl text-green-100">
+          <p className="text-xl text-red-100">
             识别并改正这些常见错误，让你的正手更上一层楼
           </p>
         </div>
@@ -134,6 +147,23 @@ export default function MistakesPage() {
                 <strong>提示：</strong>如果你发现自己有这些问题，不要气馁。
                 即使是职业选手也会有技术上的小毛病。关键是要有意识地去改正。
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Video Tutorials */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 mb-4">错误纠正视频教程</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-white rounded-lg shadow-md p-4">
+              <YouTubeEmbed videoId="8V_KWh1Uoeo" title="正手常见错误分析" />
+              <p className="mt-3 text-gray-700 font-medium">正手技术要点讲解</p>
+              <p className="text-gray-500 text-sm">详细讲解正手击球中最常见的技术错误及纠正方法</p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-4">
+              <YouTubeEmbed videoId="YqgcykDGB2A" title="初学者错误纠正" />
+              <p className="mt-3 text-gray-700 font-medium">初学者正手教学</p>
+              <p className="text-gray-500 text-sm">针对初学者最容易犯的错误提供专业纠正指导</p>
             </div>
           </div>
         </section>
