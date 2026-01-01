@@ -21,7 +21,7 @@ export default function PracticePage() {
       <section className="relative text-white py-16">
         <div className="absolute inset-0">
           <Image
-            src="https://images.unsplash.com/photo-1551773188-d4f5b2e1dc4e?w=1920&h=600&fit=crop"
+            src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=1920&h=600&fit=crop"
             alt={t('heroTitle')}
             fill
             className="object-cover"

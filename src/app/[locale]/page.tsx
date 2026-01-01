@@ -37,7 +37,7 @@ export default function Home() {
       description: t('features.mistakes.description'),
       href: '/mistakes',
       image:
-        'https://images.unsplash.com/photo-1530915365347-e35b8a3e8193?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1599586120429-48281b6f0ece?w=400&h=300&fit=crop',
     },
     {
       icon: t('features.practice.icon'),
@@ -45,7 +45,7 @@ export default function Home() {
       description: t('features.practice.description'),
       href: '/practice',
       image:
-        'https://images.unsplash.com/photo-1551773188-d4f5b2e1dc4e?w=400&h=300&fit=crop',
+        'https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=400&h=300&fit=crop',
     },
     {
       icon: t('features.pros.icon'),
@@ -168,7 +168,7 @@ export default function Home() {
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="relative w-full h-40 mb-4 rounded-lg overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1530915365347-e35b8a3e8193?w=400&h=200&fit=crop"
+                  src="https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?w=400&h=200&fit=crop"
                   alt="Tennis confidence"
                   fill
                   className="object-cover"
