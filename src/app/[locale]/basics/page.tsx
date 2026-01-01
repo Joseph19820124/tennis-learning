@@ -139,7 +139,7 @@ export default function BasicsPage() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">{t('proDemoTitle')}</h2>
           <div className="bg-white rounded-lg shadow-md p-6">
-            <YouTubeEmbed videoId="NsYdWHVfQKo" title={t('proDemoDesc')} />
+            <YouTubeEmbed videoId="2lLCIzntsXk" title={t('proDemoDesc')} />
             <p className="mt-4 text-gray-600 text-center">{t('proDemoDesc')}</p>
           </div>
         </section>

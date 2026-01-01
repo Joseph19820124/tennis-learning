@@ -116,11 +116,11 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <YouTubeEmbed videoId="xm35zPS4Gn0" title={t('video1Title')} />
+              <YouTubeEmbed videoId="_7xV_CE8y28" title={t('video1Title')} />
               <p className="mt-3 text-gray-600 text-center">{t('video1Title')}</p>
             </div>
             <div>
-              <YouTubeEmbed videoId="s0x3S1fLN00" title={t('video2Title')} />
+              <YouTubeEmbed videoId="rxo1uEdLouY" title={t('video2Title')} />
               <p className="mt-3 text-gray-600 text-center">{t('video2Title')}</p>
             </div>
           </div>
@@ -193,13 +193,13 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <YouTubeEmbed videoId="bG4UPBu8mD0" title={t('federerVideo')} />
+              <YouTubeEmbed videoId="KLzaaln6Rf0" title={t('federerVideo')} />
               <p className="mt-3 text-gray-700 font-medium text-center">
                 {t('federerVideo')}
               </p>
             </div>
             <div>
-              <YouTubeEmbed videoId="3GqnXnPCi_c" title={t('nadalVideo')} />
+              <YouTubeEmbed videoId="x1efMTU93zQ" title={t('nadalVideo')} />
               <p className="mt-3 text-gray-700 font-medium text-center">
                 {t('nadalVideo')}
               </p>
@@ -304,7 +304,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <YouTubeEmbed videoId="UkVjqybpXhY" title={t('topspinVideo')} />
+              <YouTubeEmbed videoId="u8X-i2E50Go" title={t('topspinVideo')} />
               <p className="mt-3 text-gray-600 text-center">
                 {t('topspinVideo')}
               </p>

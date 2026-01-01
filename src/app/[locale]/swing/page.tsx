@@ -262,7 +262,7 @@ export default function SwingPage() {
             {/* Pro Analysis Video */}
             <div className="mb-6">
               <h3 className="font-bold text-lg text-gray-800 mb-3">{t('federerAnalysis')}</h3>
-              <YouTubeEmbed videoId="NsYdWHVfQKo" title={t('federerAnalysis')} />
+              <YouTubeEmbed videoId="2lLCIzntsXk" title={t('federerAnalysis')} />
               <p className="mt-2 text-gray-600 text-center text-sm">{t('federerDesc')}</p>
             </div>
 
