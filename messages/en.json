@@ -17,7 +17,12 @@
     "practice": "Practice",
     "pros": "Pro Players",
     "blog": "Blog",
-    "toggleMenu": "Toggle menu"
+    "toggleMenu": "Toggle menu",
+    "groups": {
+      "strokes": "Strokes",
+      "fundamentals": "Fundamentals",
+      "improvement": "Improvement"
+    }
   },
   "footer": {
     "about": "A teaching platform focused on tennis forehand technique, providing systematic and professional forehand guidance for right-handed players. From basic grip to professional skills, helping you improve your forehand comprehensively.",

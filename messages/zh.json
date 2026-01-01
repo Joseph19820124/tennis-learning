@@ -17,7 +17,12 @@
     "practice": "练习方法",
     "pros": "职业选手",
     "blog": "博客",
-    "toggleMenu": "切换菜单"
+    "toggleMenu": "切换菜单",
+    "groups": {
+      "strokes": "击球技术",
+      "fundamentals": "基础教学",
+      "improvement": "进阶提升"
+    }
   },
   "footer": {
     "about": "专注于网球正手技术的教学平台，为右手选手提供系统、专业的正手技术指导。从基础握拍到职业技巧，帮助你全面提升正手水平。",
