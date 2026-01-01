@@ -22,6 +22,7 @@ export default function Navigation() {
     { href: '/mistakes', label: t('mistakes') },
     { href: '/practice', label: t('practice') },
     { href: '/pros', label: t('pros') },
+    { href: '/blog', label: t('blog') },
   ];
 
   return (

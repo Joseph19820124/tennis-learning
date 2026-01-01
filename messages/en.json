@@ -16,6 +16,7 @@
     "mistakes": "Mistakes",
     "practice": "Practice",
     "pros": "Pro Players",
+    "blog": "Blog",
     "toggleMenu": "Toggle menu"
   },
   "footer": {
@@ -852,6 +853,20 @@
     "nextStep": "Next Step: Learn Volley Technique",
     "nextStepDesc": "After learning the serve, let's master the net volley to complete your all-court attacking ability.",
     "nextStepButton": "Learn Volley Technique →"
+  },
+  "blog": {
+    "heroTitle": "Tennis Blog",
+    "heroDesc": "Sharing tennis techniques, training tips, and latest insights",
+    "noPosts": "No posts yet",
+    "readMore": "Read More",
+    "backToBlog": "Back to Blog",
+    "categories": {
+      "forehand": "Forehand",
+      "backhand": "Backhand",
+      "serve": "Serve",
+      "practice": "Practice",
+      "equipment": "Equipment"
+    }
   },
   "volley": {
     "heroTitle": "Volley Technique Tutorial",

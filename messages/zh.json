@@ -16,6 +16,7 @@
     "mistakes": "常见错误",
     "practice": "练习方法",
     "pros": "职业选手",
+    "blog": "博客",
     "toggleMenu": "切换菜单"
   },
   "footer": {
@@ -883,6 +884,20 @@
     "nextStep": "下一步：学习截击技术",
     "nextStepDesc": "学会发球后，让我们掌握网前截击技术，完善你的全场进攻能力。",
     "nextStepButton": "学习截击技术 →"
+  },
+  "blog": {
+    "heroTitle": "网球博客",
+    "heroDesc": "分享网球技术心得、训练经验和最新资讯",
+    "noPosts": "暂无文章",
+    "readMore": "阅读全文",
+    "backToBlog": "返回博客",
+    "categories": {
+      "forehand": "正手技术",
+      "backhand": "反手技术",
+      "serve": "发球技术",
+      "practice": "训练方法",
+      "equipment": "装备指南"
+    }
   },
   "volley": {
     "heroTitle": "截击技术教学",
